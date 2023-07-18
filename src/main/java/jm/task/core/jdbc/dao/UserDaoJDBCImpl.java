@@ -101,8 +101,7 @@ public class UserDaoJDBCImpl implements UserDao {
 
     public void cleanUsersTable() {
         String cleanTable = """
-                TRUNCATE TABLE users;
-                
+                TRUNCATE TABLE users;                
                 ALTER SEQUENCE users_id_seq RESTART WITH 1;
                 UPDATE users SET id=nextval('users_id_seq');
                 """;
